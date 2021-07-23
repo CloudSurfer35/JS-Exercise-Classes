@@ -165,7 +165,7 @@ class Instructor extends Lambdasian{
     return `Today we are learning about ${subject}`;
   }
   grade(student, subject){
-    return `${this.name} receives a perfect score on ${subject}`;
+    return `${student.name} receives a perfect score on ${subject}`;
   }
 }
 
@@ -249,10 +249,10 @@ console.log(`task 5`, kid.sprintChallenge('Music'));
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
 class ProjectManager extends Instructor{
-  constructor(ProjectManagerAttrributes){
-    super(ProjectManagerAttrributes)
-    this.gradClassName = ProjectManagerAttributes.gradClassName;
-    this.favInstructor = ProjectManagerAttrributes.favInstructor;
+  constructor(projectManagerAttributes){
+    super(projectManagerAttributes)
+    this.gradClassName = projectManagerAttributes.gradClassName;
+    this.favInstructor = projectManagerAttributes.favInstructor;
   }
 
   standUp(channel){
